@@ -1,2 +1,3 @@
-# funny-game
-A very funny game made in Godot!
+## Funny Game
+Haha, so funny! It make me laugh :D  
+Thanks Gadot!
