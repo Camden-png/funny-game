@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Showdown.mp3-c796bd53f055d2cb2e83711513e27cb3.mp3str"
+
+[deps]
+
+source_file="res://assets/Showdown.mp3"
+dest_files=[ "res://.import/Showdown.mp3-c796bd53f055d2cb2e83711513e27cb3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
