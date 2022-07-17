@@ -1,7 +1,9 @@
 extends Sprite
 
 var shared
+
 var backer
+
 var demon
 
 var first
