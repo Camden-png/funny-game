@@ -1,0 +1,342 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://assets/Funny.png" type="Texture" id=1]
+[ext_resource path="res://Funny.gd" type="Script" id=2]
+[ext_resource path="res://Rainbow.gd" type="Script" id=3]
+[ext_resource path="res://Cover 0.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=5]
+resource_name = "Colors"
+length = 4.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Rainbow:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.854902, -0.25, 0, 0.25, 0, 0.941176, -0.25, 0, 0.25, 0, 0.87451, -0.25, 0, 0.25, 0, 0.596078, -0.25, 0, 0.25, 0, 0.854902, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Rainbow:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.458824, -0.25, 0, 0.25, 0, 0.635294, -0.25, 0, 0.25, 0, 0.827451, -0.25, 0, 0.25, 0, 0.72549, -0.25, 0, 0.25, 0, 0.458824, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Rainbow:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.501961, -0.25, 0, 0.25, 0, 0.141176, -0.25, 0, 0.25, 0, 0.466667, -0.25, 0, 0.25, 0, 0.709804, -0.25, 0, 0.25, 0, 0.501961, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Rainbow:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2, 3, 4 )
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Rainbow:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.854902, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Rainbow:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0.458824, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Rainbow:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.501961, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Rainbow:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "Fade_In"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Funny:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray(  ),
+"times": PoolRealArray(  )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Funny:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray(  ),
+"times": PoolRealArray(  )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Funny:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray(  ),
+"times": PoolRealArray(  )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Funny:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 1, 2 )
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Funny:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Funny:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Funny:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Funny:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Idle"
+length = 0.5
+loop = true
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.25 )
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Fade_In"
+length = 6.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray(  ),
+"times": PoolRealArray(  )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray(  ),
+"times": PoolRealArray(  )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray(  ),
+"times": PoolRealArray(  )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 5, 6 )
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath(".:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Rainbow" type="ColorRect" parent="."]
+margin_left = -2000.0
+margin_top = -1000.0
+margin_right = 2000.0
+margin_bottom = 1000.0
+color = Color( 0.854902, 0.458824, 0.501961, 1 )
+script = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Rainbow"]
+root_node = NodePath("../..")
+anims/Colors = SubResource( 5 )
+anims/RESET = SubResource( 6 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Funny" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 2
+script = ExtResource( 2 )
+
+[node name="AnimationPlayer 1" type="AnimationPlayer" parent="Funny"]
+root_node = NodePath("../..")
+anims/Fade_In = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[node name="AnimationPlayer 2" type="AnimationPlayer" parent="Funny"]
+anims/Idle = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="Cover 0" type="ColorRect" parent="."]
+visible = false
+margin_left = -2000.0
+margin_top = -1000.0
+margin_right = 2000.0
+margin_bottom = 1000.0
+color = Color( 0, 0, 0, 0 )
+script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cover 0"]
+anims/Fade_In = SubResource( 7 )
+anims/RESET = SubResource( 8 )

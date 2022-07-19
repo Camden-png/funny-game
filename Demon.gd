@@ -4,27 +4,27 @@ var shared
 
 var rope
 
-var buffer = 20
-var first
+var text
 
+var in_place = false
 var fall = false
-var adder = 0
+var gone = false
+
+var first = -424.5
 
 func _ready():
-	get_node("AnimationPlayer").play("Idle")
+	get_node("AnimationPlayer 1").play("Idle")
+	get_node("AnimationPlayer 2").play("Lower")
 	shared = get_node("../Shared")
 	rope = get_node("../Rope")
+	text = get_node("../RichTextLabel")
 
-func _process(delta):
-	var sprite = get_node(".")
+func _process(_delta):
 	var v_width = shared.get_view_width()
 	
-	var s_width = shared.get_px_width(sprite)/2 # extra 2 to account for 2 frames
+	var s_width = shared.get_px_width(self)/2 # extra 2 to account for 2 frames
 	var pos = v_width/(800/282)-s_width/2
-	var combo = -pos+buffer+38
-	
-	if not first:
-		first = combo
+	var combo = -pos+58
 	
 	if v_width > 1200:
 		position.x = first
@@ -35,21 +35,27 @@ func _process(delta):
 	rope.position.x = position.x
 	rope.position.y = position.y-300
 	
+	# prevent the cage from snapping if it is not in place
+	
+	if position.y == 50 and not in_place:
+		in_place = true
+	
+	if not in_place:
+		return
+	
 	# check if the rope has been snapped
 	combo -= 120
 	if pos <= combo+s_width and not fall:
+		get_node("AnimationPlayer 2").play("Fall")
 		fall = true
 	
-	# let demon fall
-	if fall and position.y <= 2000:
-		adder += 0.3
-		position.y += 4+adder
+	if not fall:
+		return
 	
-	# hide demon after going offscreen
-	# this is super lazy code, I am tired
-	var hide_spot = 99999
-	if position.y >= 2000 and position.y != hide_spot:
-		position.y = hide_spot
-		
-	
-	
+	# check if cage has fully fallen
+	if position.y == 1200 and not gone:
+		get_node("../Cover").get_node("AnimationPlayer").play("Fade_Out")
+		text.array = ["", "", "", "", "", "YOU", "DID", "IT", ""]
+		text.next_level = true
+		text.reset()
+		gone = true

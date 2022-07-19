@@ -13,8 +13,7 @@ func _ready():
 	backer = get_node("../Backer")
 	demon = get_node("../Demon")
 
-func _process(delta):
-	var v_width = shared.get_view_width()
+func _process(_delta):
 	var dist = position.x-demon.position.x
 	
 	if not first:
