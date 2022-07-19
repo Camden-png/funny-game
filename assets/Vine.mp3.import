@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Vine.mp3-ca809628a5000e1d020036b3f01f13de.mp3str"
+
+[deps]
+
+source_file="res://assets/Vine.mp3"
+dest_files=[ "res://.import/Vine.mp3-ca809628a5000e1d020036b3f01f13de.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

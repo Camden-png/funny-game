@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://assets/Door/Dtape.png" type="Texture" id=1]
 [ext_resource path="res://assets/Door/Dleft.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://assets/Door/Dinner.png" type="Texture" id=7]
 [ext_resource path="res://assets/Win.png" type="Texture" id=8]
 [ext_resource path="res://Cover 3.gd" type="Script" id=9]
+[ext_resource path="res://assets/PlushBlanket.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/Concrete.mp3" type="AudioStream" id=11]
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -410,11 +412,9 @@ texture = ExtResource( 6 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Inside" type="Sprite" parent="Door Bits"]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 7 )
 
 [node name="Top" type="Sprite" parent="Door Bits"]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Door Bits/Top"]
@@ -423,7 +423,6 @@ anims/RESET = SubResource( 3 )
 anims/Slide = SubResource( 4 )
 
 [node name="Left" type="Sprite" parent="Door Bits"]
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
 [node name="Right" type="Sprite" parent="Door Bits"]
@@ -465,3 +464,10 @@ anims/RESET = SubResource( 10 )
 [node name="AnimationPlayer 2" type="AnimationPlayer" parent="Win"]
 anims/Idle = SubResource( 11 )
 anims/RESET = SubResource( 12 )
+
+[node name="PlushBlanket" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+volume_db = 5.0
+
+[node name="Concrete" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
